@@ -1,5 +1,3 @@
-package Easy.validParenthesis;
-
 import java.util.Stack;
 
 /**

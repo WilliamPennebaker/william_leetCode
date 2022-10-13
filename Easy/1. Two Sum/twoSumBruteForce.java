@@ -1,5 +1,3 @@
-package Easy.twoSum;
-
 /**
  * Submitted 08/19/2021
  * 

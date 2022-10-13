@@ -1,5 +1,3 @@
-package Easy.LongestCommonPrefix;
-
 /**
  * Submitted: 09/07/2022
  * 

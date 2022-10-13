@@ -1,4 +1,4 @@
-package Easy.validPalindrome;
+
 /**
  * 
  * A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
@@ -24,8 +24,7 @@ package Easy.validPalindrome;
  * 1 <= s.length <= 2 * 105
  * s consists only of printable ASCII characters.
  */
-public class validPalindromeBruteForce {
-
+public class validPalindromeOptimal {
     public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(s));
@@ -35,21 +34,26 @@ public class validPalindromeBruteForce {
         System.out.println(isPalindrome(s));
     }
 
+    /**
+     * Two pointer solution
+     * 
+     * Time: O(n) - looping through string
+     * Space: O(1) - no costly variables, ie. regex string trimming
+     */
     public static boolean isPalindrome(String s) {
-        boolean isPalindrome = false;
-        // to lowercase
         s = s.toLowerCase();
-        // Replace nonalphanumeric and remove white space
-        s = s.replaceAll("[^a-zA-z0-9]", "");
+        
+        int left = 0, right = s.length()-1;
 
-        String reverse = "";
-        for (int i = s.length() - 1; i >= 0; i--) {
-            reverse += s.charAt(i);
+        while (left < right) {
+            while(left < right && !Character.isLetterOrDigit(s.charAt(right)))
+                right--;
+            while(left < right && !Character.isLetterOrDigit(s.charAt(left)))
+                left++;
+            if(s.charAt(left++) != s.charAt(right--))
+                return false;
         }
 
-        if(reverse.equals(s))
-            isPalindrome = true;
-
-        return isPalindrome;
+        return true;
     }
 }

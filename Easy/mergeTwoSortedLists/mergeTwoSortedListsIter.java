@@ -1,4 +1,4 @@
-package Easy.mergeTwoSortedLists;
+
 
 /**
  * Submitted: 09/28/2022
