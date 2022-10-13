@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": [
+        "Easy/26. Remove Duplicates From Sorted Array",
+        "Easy\\1. Two Sum",
+        "Easy\\9. Palindrome Number",
+        "Easy\\13. Roman to Integer",
+        "Easy\\14. Longest Common Prefix",
+        "Easy\\20. Valid Parenthesis",
+        "Easy\\27. Remove Element",
+        "Easy\\125. Valid Palindrome",
+        "Easy\\136. Single Number",
+        "Easy\\MergeTwoSortedLists"
+    ]
+}

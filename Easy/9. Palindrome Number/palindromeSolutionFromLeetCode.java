@@ -1,4 +1,4 @@
-package Easy.palindromeNumber;
+
 
 /**
  * DONT USE

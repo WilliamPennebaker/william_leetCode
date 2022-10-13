@@ -1,4 +1,4 @@
-package Easy.palindromeNumber;
+
 
 /**
  * Submitted 09/06/2022
