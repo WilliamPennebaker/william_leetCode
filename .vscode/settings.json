@@ -9,6 +9,9 @@
         "Easy\\27. Remove Element",
         "Easy\\125. Valid Palindrome",
         "Easy\\136. Single Number",
-        "Easy\\MergeTwoSortedLists"
+        "Easy\\MergeTwoSortedLists",
+        "Easy\\35. Search Insert Position",
+        "Easy\\58. Length of Last Word",
+        "Easy\\66. Plus One"
     ]
 }
