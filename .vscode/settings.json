@@ -1,22 +1,10 @@
 {
     "java.project.sourcePaths": [
+        "Easy/removeDuplicatesFromSortedList.java",
+        "Easy/412. FizzBuzz",
         "Easy/26. Remove Duplicates From Sorted Array",
-        "Easy\\1. Two Sum",
-        "Easy\\9. Palindrome Number",
-        "Easy\\13. Roman to Integer",
-        "Easy\\14. Longest Common Prefix",
-        "Easy\\20. Valid Parenthesis",
-        "Easy\\27. Remove Element",
-        "Easy\\125. Valid Palindrome",
-        "Easy\\136. Single Number",
-        "Easy\\MergeTwoSortedLists",
-        "Easy\\removeDuplicatesFromSortedList",
-        "Easy\\35. Search Insert Position",
-        "Easy\\58. Length of Last Word",
-        "Easy\\66. Plus One",
-        "Easy\\67. Add Binary",
-        "Easy\\69. sqrt(x)",
-        "Easy\\70. Climbing Stairs",
-        "Easy/removeDuplicatesFromSortedList.java"
+        "Easy/217. Contains Duplicate",
+        "Easy/121. Best Time to Buy and Sell Stock",
+        "Easy/509. Fibonacci Number"
     ]
 }
