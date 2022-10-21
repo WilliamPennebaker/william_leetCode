@@ -3,17 +3,23 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * Submitted: 10/20/2022
+ * Submitted: 10/21/2022
  * 
- * Given the root of a binary tree, return the inorder traversal of its nodes' values.
+ * Given the root of a binary tree, return the preorder traversal of its nodes' values.
  * 
- * 1. Traverse the left sub-tree until you reach a leaf node
- * 2. Visit the root node
- * 3. Traverse the right sub-tree until you reach a leaf node
+ * Constraints:
+ *      The number of nodes in the tree is in the range [0, 100].
+ *      -100 <= Node.val <= 100
+ * 
+ * 
+ * 
+ * 1. Visit root node
+ * 2. Traverse the left sub-tree
+ * 3. Traverse the right sub-tree
  */
 
-public class inOrderTraversalIter {
-   
+public class preOrderTraversalIter {
+    
     public static void main(String[] args) {
         /**
          * Example 1:
@@ -40,18 +46,18 @@ public class inOrderTraversalIter {
      * Time: O(n)
      * Space: O(n)
      */
-    public static List<Integer> inorderTraversal(TreeNode root) {
+    public static List<Integer> preOrderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        if(root == null) return list;
         Stack<TreeNode> stack = new Stack<>();
+        if(root == null) return list;
         TreeNode curr = root;
         while(curr != null || !stack.isEmpty()) {
             while(curr != null) {
+                list.add(curr.val);
                 stack.push(curr);
                 curr = curr.left;
             }
             curr = stack.pop();
-            list.add(curr.val);
             curr = curr.right;
         }
         return list;

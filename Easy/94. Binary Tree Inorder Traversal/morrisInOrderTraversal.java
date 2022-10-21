@@ -5,9 +5,13 @@ import java.util.List;
  *
  * 
  * Given the root of a binary tree, return the inorder traversal of its nodes' values.
+ * 
+ * 1. Traverse the left sub-tree until you reach a leaf node
+ * 2. Visit the root node
+ * 3. Traverse the right sub-tree until you reach a leaf node
  */
 
-public class morrisTraversal {
+public class morrisInOrderTraversal {
    
     public static void main(String[] args) {
         /**
@@ -49,26 +53,31 @@ public class morrisTraversal {
      * Space: O(1) - Extra space is allocated for the arraylist of size n, however the output doesnt count towards the space complexity.
      */
     public static List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        if(root == null) return list;
         TreeNode curr = root;
         TreeNode pre;
 
         while(curr != null) {
             if(curr.left == null) {
-                res.add(curr.val);
+                list.add(curr.val);
                 curr = curr.right; // move to next right node
             } else { // has a left subtree
                 pre = curr.left;
-                while(pre != null) {
+                while(pre.right != null && pre.right != curr) {
                     pre = pre.right;
                 }
-                pre.right = curr; // put cur after the pre node
-                TreeNode temp = curr; // store cur node
-                curr = curr.left; // move cur to the top of the new tree
-                temp.left = null; // original cur left to null, to avoid infinite loops
+                if(pre.right == null) { // make current as right child of its inorder predecessor
+                    pre.right = curr;
+                    curr = curr.left;
+                } else { // revert changes made in if to restore original tree ie, fix right child of predecessor
+                    pre.right = null;
+                    list.add(curr.val);
+                    curr = curr.right;
+                }
             }
         }
-        return res;
+        return list;
     }
 
 }
