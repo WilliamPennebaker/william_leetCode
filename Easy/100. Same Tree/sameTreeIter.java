@@ -57,8 +57,7 @@ public class sameTreeIter {
             TreeNode two = queue.poll();
 
             if(one == null && two == null) continue;
-            if(one == null || two == null) return false;
-            if(one.val != two.val) return false;
+            if(one == null || two == null || one.val != two.val) return false;
 
             queue.offer(one.left);
             queue.offer(two.left);
